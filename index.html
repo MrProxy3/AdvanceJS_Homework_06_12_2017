@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS. Advanced. AJAX. Users management app</title>
+	<link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+<form action="/user" name="users-edit"
+      class="users-edit users-edit-hidden" method="POST">
+	<h2>Create/Edit user</h2>
+
+	<input type="hidden" name="id" id="id">
+	<div class="field-row">
+		<label for="fullName" class="label">Full name:</label>
+		<input type="text" class="input" name="fullName" id="fullName">
+		<span class="field-row_span">Enter your full name here</span>
+	</div>
+	<div class="field-row">
+		<label for="email" class="label">Email:</label>
+		<input type="email" class="input" name="email" id="email">
+		<span class="field-row_span">Enter your email here</span>
+	</div>
+	<div class="field-row">
+		<label for="birthday" class="label">Birthday:</label>
+		<input type="text" class="input" name="birthday" id="birthday">
+		<span class="field-row_span">Enter your birthday date here</span>
+	</div>
+	<div class="field-row">
+		<label for="profession" class="label">Profession:</label>
+		<input type="text" class="input" name="profession" id="profession">
+		<span class="field-row_span">Enter your profession here</span>
+	</div>
+	<div class="field-row">
+		<label for="address" class="label">Address:</label>
+		<input type="text" class="input" name="address" id="address">
+		<span class="field-row_span">Enter your address here</span>
+	</div>
+	<div class="field-row">
+		<label for="country" class="label">Country:</label>
+		<select name="country" class="input" id="country"></select>
+		<span class="field-row_span">Choose your country from here</span>
+	</div>
+	<div class="field-row">
+		<label for="shortInfo" class="label">Short Information:</label>
+		<textarea name="short-info" class="input" id="shortInfo"></textarea>
+		<span class="field-row_span">Enter some information about you here</span>
+	</div>
+	<div class="field-row">
+		<label for="fullInfo" class="label">Detailed Information:</label>
+		<textarea name="full-info" class="input" id="fullInfo"></textarea>
+		<span class="field-row_span">We want know everything about you!!! Type here full information</span>
+	</div>
+	<button class="btn btn-cancel" id="cancel">Cancel</button>
+	<button class="btn btn-save">
+		Save changes
+	</button>
+</form>
+<h2 style="text-align: center;"><span class="list-header" style="text-transform: uppercase;">Users list</span>
+	<button class="btn btn-new" id="create">Create user</button>
+</h2>
+
+<div id="details"></div>
+<table id="users-table">
+	<tr>
+		<th>Full name</th>
+		<th>Profession</th>
+		<th>Short info</th>
+		<th>Options</th>
+	</tr>
+</table>
+
+
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
